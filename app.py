@@ -157,7 +157,7 @@ def show_dashboard():
         chart_image = generate_chart_image(chart_data)
         st.download_button("Download Grafik PNG", data=chart_image, file_name="grafik_capaian.png", mime="image/png")
 
-    menu = st.sidebar.radio("Menu", ["Dashboard", "Reset Password", "Notifikasi"] + (["Upload Data (Admin Only)"] if role == "admin" else []))
+    menu = st.sidebar.radio("Menu", ["Dashboard", "Reset Password", "Notifikasi", "Generate Akun User"] + (["Upload Data (Admin Only)"] if role == "admin" else []))
     if menu == "Reset Password":
         reset_password()
     elif menu == "Notifikasi":
@@ -200,3 +200,51 @@ if "logged_in" not in st.session_state:
     login()
 else:
     show_dashboard()
+
+
+def generate_user_password_from_sheet():
+    st.subheader("🔐 Generate Akun User dari Google Sheet")
+
+    scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
+    creds = Credentials.from_service_account_info(st.secrets["google"], scopes=scope)
+    client = gspread.authorize(creds)
+    sheet = client.open_by_key("11O5e0klK3Giry-uXwoXS2zmUl5L7rpl-Yl-KXNROFoo").sheet1
+    data = sheet.get_all_records()
+    df = pd.DataFrame(data)
+
+    if "NMPPK" not in df.columns:
+        st.error("Kolom 'NMPPK' tidak ditemukan.")
+        return
+
+    nmppk_list = df["NMPPK"].dropna().unique().tolist()
+
+    df_users = pd.DataFrame({
+        "Username": [n.lower().replace(" ", "") for n in nmppk_list],
+        "Password": [n.lower().replace(" ", "") + "123" for n in nmppk_list],
+        "NMPPK": nmppk_list,
+        "Role": ["user"] * len(nmppk_list)
+    })
+
+    df_users = pd.concat([pd.DataFrame({
+        "Username": ["admin"],
+        "Password": ["admin123"],
+        "NMPPK": [None],
+        "Role": ["admin"]
+    }), df_users], ignore_index=True)
+
+    st.dataframe(df_users)
+
+    from io import BytesIO
+    output = BytesIO()
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        df_users.to_excel(writer, index=False, sheet_name='UserLogin')
+    output.seek(0)
+
+    st.download_button("📥 Download Akun User Excel", data=output, file_name="akun_user_dari_google_sheet.xlsx", mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+
+
+if menu == "Generate Akun User":
+    if role == "admin":
+        generate_user_password_from_sheet()
+    else:
+        st.warning("Menu ini hanya untuk admin.")
