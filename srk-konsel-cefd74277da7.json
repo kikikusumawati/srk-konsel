@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "srk-konsel",
+  "private_key_id": "cefd74277da73f6e187f1c33dd24592b3ddb4433",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDJP3SSphNLVx2y\nJLqrpsMg0ZuZK7m4nx1HBkVfPtScXvjWEPCdW212hEhK3Q3SPxODfMuokFWV/XgF\ntEgneax5sbkXqBP0EbrSeRWtdwZ9HfuFg7sXnikv3p7wKw6XrINdQMnw1VrXy5V2\ndeGhf2hykHT1F4PCbsc93+mog7NQHbQoDfb2e13YPv4K5z7SOMaszpy7k48FqAbX\nqk4EinrlFw49TTWS9bIU8Tf6zYwO0JmkZ6BNvxYK/8Npsr8760RNS9OAXQuMvMhv\nf3B1LVZ6C+nnB6I1bH2t75wcms+sy71y6+HteMeJMFbiVaXCmxVoRgyUiXpd7D0j\n/5DNQ7fZAgMBAAECggEAXve1XJDHcRmql0rS1jbLRPz1BtqF+VQIvl/8s54UObht\nh6MV0MP4y2FQNhfLsmf2nulwt9posO+cSGDTXeGCnSjbdgjoZZhKR5FBRArzgm54\nJ4DK9LG7sO3GpgJDkBqmIQb2ZNJh3IyjOvQU5h+YG9wEfTY8BLA/EHlOK6n+n7KW\nesWcSmzvfbUw+hDdXmbofStg0UefBwg8FN173jrZgtD4OwTfeli6Zttc8mVzjQ7G\n4numkW9TQMo8gb2eSoIXU1XcExTCgKXoh5AcRTVUv6qjAy6bODTvmOrpHcOg2O1k\nzWSkugUBMr849rEUbgQX4aRLhdEhewpv9SzihsnHawKBgQDk+aKcLbpAcde29MSs\nltYFHkzhGWNhWGbJ3WE1KXVfcNd/fND9pDZmC1+fpwsJnm1Zt3yDsmXtbbEgYCjx\nh9vHBgFYnQ8rQk/iljvPvk4W9NqW5vuQ1SkgA5uQFmHjAdCrIfVBfh4NmcfQZv1Z\n9VfvmkiMNS5BDc4I5BDShd5OMwKBgQDhAA4ltiPdPylZyrsRSLb2N/w9HbM7f87i\nlZ/HdaEX6fx1UZvdNzAQ6ts22/+/kdbaLqWpV+o6Tp2Kn1WhBPN5kyeJWGsYfzvQ\nVdAzbwuzHkXgUYPjZR7xB7eXDhFNabaa2JswuefPOSvkxQH5r7LF70PdVpsFjzYS\npUC5ToQ9wwKBgDtu/KFTUTv3EMoBgKdXw5eyhLwM7fnPi2asWtYEu92ZGaaSzGB5\n5lDYdOqo3jmR8MpP0TcR8FkPluFTdG01GXvweBr7MXvGC5xB6KaEvBpDVhXDQNsY\nKUORDCj7Vk8pInO5LcLhLIXVO8NBaFOYVknwHxKdnzLtlWRDZoZujwR3AoGAQztf\n/tbJKrBX69PPSB/hQ/uArMZ2Kx5KtJwfDVvR0jKB1JCZMWXvP+7dqCve5OBwQevU\nZqC1hcy9+JEZ5i5zjm1xT/IStlQ2jE9IEkZpSZGPMbNJ5KXvs/gpXMLAWtBu1yBI\nZyv1347m1cokh/Z/RfPz5Gyfj+62KqYki/qxOz8CgYEAiTHJscO7nLA8wi8GPDF0\nhPxhz9FJz7lQqVaR47A6XZBITddvkoOc73vdw2tZlvEja1SJH7la/3Ajucw1oSSU\nEXXd++Fl5kS9Z9V6ytLnhoHBH15DjI4IKdt0dp+kaA3Thns/fm6Srz+RAnCNo5ot\nird/Ho9ciMfVs9UpcsbqGIs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "streamlit-access@srk-konsel.iam.gserviceaccount.com",
+  "client_id": "102897609134238790481",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/streamlit-access%40srk-konsel.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
